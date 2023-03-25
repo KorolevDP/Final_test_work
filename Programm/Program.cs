@@ -27,12 +27,12 @@ string[] GenerateArray (int size)
 void ShowArray(string[] array)
 {
     Console.Write("[ ");
-    for (int i = 0; i < array.Length-1; i++)
+    for (int i = 0; i < array.Length - 1; i++)
     {
-         Console.Write($"{array[i]}, ");
+         Console.Write($"{array[i]}, ");         
     }
     Console.Write($"{array[array.Length - 1]}");
-    Console.Write("]");
+    Console.Write(" ]");
 }
 
 string[] CreateNewArray(string[] array)
@@ -54,7 +54,6 @@ string[] CreateNewArray(string[] array)
 int size = InputInt("Enter size array:");
 string[] array = GenerateArray(size);
 string[] newArray = CreateNewArray(array);
-newArray = newArray.Where(n => !string.IsNullOrEmpty(n)).ToArray();
 Console.WriteLine();
 Console.WriteLine("New array with less than 3 symbols");
 ShowArray(newArray);
