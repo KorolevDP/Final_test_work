@@ -18,7 +18,8 @@ string[] GenerateArray (int size)
 	for(int i = 0; i < stringArray.Length; i++)
 	{
         Console.WriteLine($"Enter element on index {i}");
-	    stringArray[i] = Console.ReadLine();
+	    Console.Write("> ");
+        stringArray[i] = Console.ReadLine();
 	}
     return stringArray;
    }
